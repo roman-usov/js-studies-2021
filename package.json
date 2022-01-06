@@ -1,0 +1,22 @@
+{
+  "name": "complete-javascript-course-master",
+  "version": "1.0.0",
+  "description": "This repo contains starter files and final code for all sections and projects contained in the course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.1",
+    "node-modules": "^0.0.1",
+    "parcel": "^2.0.1",
+    "prettier": "2.3.2"
+  },
+  "dependencies": {
+    "leaflet": "^1.7.1",
+    "lodash-es": "^4.17.21"
+  }
+}
