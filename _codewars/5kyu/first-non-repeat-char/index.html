@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>HTML & CSS Sandbox</title>
+</head>
+<body>
+<header>
+  <h1>Calculator</h1>
+</header>
+<main>
+  <section>
+    <input type="number" class="days" />
+    <button class="btn submit">Submit</button>
+  </section>
+  <section>
+    <p>Your amount due is: <span class="due"></span></p>
+  </section>
+  <div data-element="fields" data-stacked="true">
+    <div>
+      <input
+              type="text"
+              class="dna-input"
+              aria-label="DNA String"
+              style="
+              color: #000;
+              border-color: #e3e3e3;
+              border-radius: 4px;
+              font-weight: 400;
+            "
+              name="fields[dna-string]"
+              placeholder="DNA String"
+      />
+    </div>
+    <button
+            class="submit-dna"
+            data-element="submit"
+            style="
+            color: #fff;
+            background-color: #1677be;
+            border-radius: 4px;
+            font-weight: 400;
+          "
+    >
+      <span>SUBMIT</span>
+    </button>
+  </div>
+  <div>
+    <p>
+      Your RNA is:
+      <span class="rna">Your RNA will appear here</span>
+    </p>
+  </div>
+</main>
+<script src="firstNonRepeatChar.js"></script>
+</body>
+</html>

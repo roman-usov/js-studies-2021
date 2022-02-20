@@ -1,4 +1,4 @@
-import { smallestDivisor } from "../smallestDivisor.js";
+const smallestDivisor = require("../script.js");
 
 console.log(smallestDivisor);
 
@@ -24,7 +24,7 @@ const testCases = test.each([
   },
   {
     num: 4,
-    expectedResult: 4,
+    expectedResult: 2,
   },
   {
     num: 8,
@@ -44,7 +44,7 @@ const testCases = test.each([
   },
   {
     num: 121,
-    expectedResult: 1,
+    expectedResult: 11,
   },
 ]);
 

@@ -1,8 +1,12 @@
 {
   "name": "complete-javascript-course-master",
   "version": "1.0.0",
-  "description": "This repo contains starter files and final code for all sections and projects contained in the course.",
   "type": "module",
+  "description": "This repo contains starter files and final code for all sections and projects contained in the course.",
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ],
   "devDependencies": {
     "jest": "^27.4.7",
     "node-modules": "^0.0.1",
