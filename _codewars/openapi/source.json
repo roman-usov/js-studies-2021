@@ -1,0 +1,780 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "PLP methods for the Hybrid Channel"
+  },
+  "servers": [
+    {
+      "description": "Dev Environment",
+      "url": "https://dev-api-internal-op.apigee.lmru.tech:443/hybrid/v1"
+    }
+  ],
+  "paths": {
+    "/getProducts": {
+      "post": {
+        "summary": "Gets products for display on a PLP",
+        "operationId": "getProducts",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "x-api-key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "QVn7k9sdfsfw32GcwGdFGxGGWBwerw"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfull response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/200_OK"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Is not used. Added to meet the ADEO api requirements",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error caused by provided input data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/400_Failed_scheme_validation"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error caused by x-api-key validation error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/401_Failed_x-api-key_validation"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Error if no regionId has been identified by provided regionCode",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/404_Failed_To_Identify_regionId_By_regionCode"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Error if Search Engine returned an error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/409_Search_Engine_Error"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error caused by internal error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/500_Unexpected_response_from_Product_Brick"
+                    },
+                    {
+                      "$ref": "#/components/schemas/500_Unexpected_response_from_Store_Repo_For_getRegions"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["offset"],
+                "properties": {
+                  "regionId": {
+                    "description": "ID of the region for which we want to display products",
+                    "type": "string",
+                    "example": "7073"
+                  },
+                  "regionCode": {
+                    "description": "Code of the region for which we want to display products",
+                    "type": "string",
+                    "example": "kostroma"
+                  },
+                  "offset": {
+                    "description": "The starting product index for a product display. For example, if the value is 30 and the received number of products is 100, the products starting from the index of 30 will be displayed. The end of the product list will be determined by the specified limit. The list indices are zero-based.",
+                    "type": "integer",
+                    "example": 30
+                  },
+                  "keyPhrase": {
+                    "description": "Phrase by which we want to find and fetch products",
+                    "type": "string",
+                    "example": "сетка"
+                  },
+                  "familyIds": {
+                    "description": "IDs of the product families",
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": "c8b28420-4982-11ea-9e76-ef66c83887c3"
+                    }
+                  },
+                  "collectionIds": {
+                    "description": "IDs of the product collections",
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "example": "39eb08c1-0881-11eb-af52-db418777676f"
+                    }
+                  },
+                  "limit": {
+                    "description": "Limit set for the number of products to find and fetch",
+                    "type": "integer",
+                    "example": 30
+                  },
+                  "facets": {
+                    "description": "Filtering options to apply",
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Facet"
+                    }
+                  },
+                  "suggest": {
+                    "description": "Indicates whether to return suggestions or not",
+                    "type": "boolean",
+                    "example": true
+                  },
+                  "sortId": {
+                    "description": "ID for the sorting pattern to apply. Enum?",
+                    "type": "string",
+                    "example": "1"
+                  },
+                  "customerId": {
+                    "description": "GA's customerId provided by the client from GTM",
+                    "type": "string",
+                    "example": "GA1.2.703986689.1640331912"
+                  },
+                  "searchMethod": {
+                    "description": "посмотреть в SE docs, какие еще возможны варианты",
+                    "type": "string",
+                    "enum": ["DEFAULT", "COLLECTION"]
+                  }
+                },
+                "oneOf": [
+                  {
+                    "required": ["regionId"]
+                  },
+                  {
+                    "required": ["regionCode"]
+                  }
+                ],
+                "anyOf": [
+                  {
+                    "required": ["keyPhrase"]
+                  },
+                  {
+                    "required": ["familyIds"]
+                  },
+                  {
+                    "required": ["collectionIds"]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/set-basket": {
+      "put": {
+        "description": "Обновляет корзину на сервере по референтному магазину региона",
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "regionCode": {
+                    "type": "string",
+                    "example": "kemerovo"
+                  },
+                  "products": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/BasketProduct"
+                    }
+                  }
+                },
+                "required": ["products"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "referenceStoreId": {
+                      "type": "string",
+                      "example": "55"
+                    },
+                    "products": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/BasketProduct"
+                      }
+                    }
+                  },
+                  "required": ["referenceStoreId", "products"]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key"
+      }
+    },
+    "schemas": {
+      "Facet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Facet ID",
+            "example": "00596"
+          },
+          "values": {
+            "description": "значения из чекбоксов фасетов",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "example": "8.0"
+            }
+          },
+          "min": {
+            "description": "значения из ползунков",
+            "type": "integer",
+            "nullable": true,
+            "example": 0
+          },
+          "max": {
+            "description": "значения из ползунков",
+            "type": "integer",
+            "nullable": true,
+            "example": 15
+          }
+        }
+      },
+      "200_OK": {
+        "type": "object",
+        "properties": {
+          "totalCount": {
+            "description": "Total count of products returned",
+            "type": "integer",
+            "example": 294
+          },
+          "keyPhrase": {
+            "description": "Original pharse from the client by which products have been found and fetched",
+            "type": "string",
+            "example": "сетка"
+          },
+          "searchPhrase": {
+            "description": "Phrase from the search engine by which products have been found and fetched",
+            "type": "string",
+            "nullable": true,
+            "example": "сетка"
+          },
+          "familyName": {
+            "description": "Name of the product family for which products have been found and fetched",
+            "type": "string",
+            "nullable": true,
+            "example": "FamilyForSRP"
+          },
+          "sorts": {
+            "description": "Available sorting options",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sort"
+            }
+          },
+          "content": {
+            "description": "Found products and their details",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Product"
+            }
+          }
+        }
+      },
+      "Sort": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Sorting option ID",
+            "type": "string",
+            "enum": ["1", "2", "3591", "9"],
+            "example": "1"
+          },
+          "name": {
+            "description": "Sorting option name",
+            "type": "string",
+            "example": "Цена по возрастанию"
+          },
+          "isDefault": {
+            "description": "Default sorting option",
+            "type": "boolean",
+            "example": false
+          }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "productPriceCategory": {
+            "description": "Price category of a product",
+            "type": "string",
+            "enum": ["STD", "LOF", "BPR"]
+          },
+          "price": {
+            "$ref": "#/components/schemas/Price"
+          },
+          "productLink": {
+            "description": "Path to a product description",
+            "type": "string",
+            "example": "/product/reshetka-ventilyacionnaya-s-setkoy-vents-mvm-150-s-11719942/"
+          },
+          "displayedName": {
+            "description": "Product name for display",
+            "type": "string",
+            "example": "Решетка вентиляционная с сеткой Вентс МВМ 150 с, 150х150 мм, цвет бежевый"
+          },
+          "eligibility": {
+            "$ref": "#/components/schemas/Eligibility"
+          },
+          "productId": {
+            "description": "Leroy Merlin product code",
+            "type": "string",
+            "example": "82471768"
+          },
+          "mediaMainPhoto": {
+            "$ref": "#/components/schemas/MediaMainPhoto"
+          },
+          "source": {
+            "description": "Product Information Source",
+            "type": "string",
+            "enum": ["Step", "PIM", "WIZ"]
+          },
+          "brand": {
+            "description": "Product brand name",
+            "type": "string",
+            "example": "ВЕНТС"
+          },
+          "variants": {
+            "$ref": "#/components/schemas/Variants"
+          }
+        }
+      },
+      "Eligibility": {
+        "description": "Determines product availability on the website",
+        "type": "object",
+        "properties": {
+          "homeDeliveryEligible": {
+            "description": "Available for home delivery",
+            "type": "boolean",
+            "example": true
+          },
+          "relayPointEligible": {
+            "description": "Available for pickup points",
+            "type": "boolean",
+            "example": true
+          },
+          "storeDeliveryEligible": {
+            "description": "Available for pickup from stores",
+            "type": "boolean",
+            "example": true
+          },
+          "webEligible": {
+            "description": "Available for sale",
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "Price": {
+        "description": "Prices applicable to a product",
+        "type": "object",
+        "properties": {
+          "main_price": {
+            "description": "The main product price",
+            "type": "number",
+            "example": 128
+          },
+          "main_uom": {
+            "description": "Unit of measurement code",
+            "type": "string",
+            "example": "NIU"
+          },
+          "main_uom_rus": {
+            "description": "Unit of measurement in Russian",
+            "type": "string",
+            "example": "шт."
+          },
+          "currency": {
+            "description": "Price currency",
+            "type": "string",
+            "example": "RUB"
+          },
+          "additional_price": {
+            "description": "An additional product price",
+            "type": "number",
+            "example": 130
+          },
+          "additional_uom": {
+            "description": "An additional unit of measurement code",
+            "type": "string",
+            "example": "EA"
+          },
+          "additional_uom_rus": {
+            "description": "An additional unit of measurement in Russian",
+            "type": "string",
+            "example": "шт."
+          }
+        }
+      },
+      "MediaMainPhoto": {
+        "description": "Object with links to photos for different device types",
+        "type": "object",
+        "properties": {
+          "mobile": {
+            "description": "Link to a photo for mobile devices",
+            "type": "string",
+            "example": "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_150,h_150,c_pad,b_white,d_photoiscoming.png/LMCode/11719942.jpg"
+          },
+          "tablet": {
+            "description": "Link to a photo for tablet devices",
+            "type": "string",
+            "example": "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_180,h_180,c_pad,b_white,d_photoiscoming.png/LMCode/11719942.jpg"
+          },
+          "desktop": {
+            "description": "Link to a photo for desktop devices",
+            "type": "string",
+            "example": "https://res.cloudinary.com/lmru/image/upload/f_auto,q_auto,w_150,h_150,c_pad,b_white,d_photoiscoming.png/LMCode/11719942.jpg"
+          }
+        }
+      },
+      "Variants": {
+        "description": "Variants associated with the product",
+        "type": "object",
+        "properties": {
+          "axes": {
+            "description": "Variation attributes, e.g. a door (glass or blank), size, color, etc., usually one or two attributes",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Axe"
+            }
+          },
+          "products": {
+            "description": "Product variations",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AxeProduct"
+            }
+          }
+        }
+      },
+      "Axe": {
+        "description": "Variation attribute",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Axe name",
+            "type": "string",
+            "example": "Ширина (мм)"
+          },
+          "attribute": {
+            "description": "Attribute code",
+            "type": "string",
+            "example": "00320"
+          }
+        }
+      },
+      "AxeProduct": {
+        "description": "Variation product",
+        "type": "object",
+        "properties": {
+          "productId": {
+            "description": "Leroy Merlin product code",
+            "type": "string",
+            "example": "82718593"
+          },
+          "axes": {
+            "description": "Axes available for a product",
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "description": "Product variation for a given axe",
+                    "type": "string",
+                    "example": "45.0"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "BasketProduct": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "82762314"
+          },
+          "quantity": {
+            "type": "number",
+            "example": 42
+          }
+        },
+        "required": ["id", "quantity"]
+      },
+      "400_Failed_scheme_validation": {
+        "description": "Scheme validation error based on the settings defined in the Documentation section\nFor now, the error is not returned, but will be returned in the future.\n",
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "enum": ["invalid json"]
+                },
+                "stringCode": {
+                  "type": "string",
+                  "enum": ["BAD_REQUEST"]
+                }
+              }
+            }
+          }
+        }
+      },
+      "401_Failed_x-api-key_validation": {
+        "type": "object",
+        "properties": {
+          "fault": {
+            "type": "object",
+            "properties": {
+              "faultstring": {
+                "type": "string",
+                "example": "Failed to resolve API Key variable request.header.x-api-key"
+              },
+              "detail": {
+                "type": "object",
+                "properties": {
+                  "errorcode": {
+                    "type": "string",
+                    "example": "steps.oauth.v2.FailedToResolveAPIKey"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "404_Failed_To_Identify_regionId_By_regionCode": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "enum": [404]
+          },
+          "error": {
+            "type": "string",
+            "enum": ["Not found"]
+          },
+          "message": {
+            "type": "string",
+            "enum": ["Region not found"]
+          }
+        }
+      },
+      "409_Search_Engine_Error": {
+        "description": "Error returned if an error response has been received from the Search Engine\n",
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "boolean"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "enum": ["Search Engine Failed"]
+                },
+                "stringCode": {
+                  "type": "string",
+                  "enum": ["SEARCH_ERROR"]
+                }
+              }
+            }
+          }
+        }
+      },
+      "500_Unexpected_response_from_Store_Repo_For_getRegions": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "enum": [500]
+          },
+          "error": {
+            "type": "string",
+            "enum": ["Internal Server Error"]
+          },
+          "message": {
+            "type": "string",
+            "enum": ["Regions service failed", "Something went wrong"]
+          }
+        }
+      },
+      "500_Unexpected_response_from_Product_Brick": {
+        "description": "Errors that can be returned by services housed in the Product Brick\n",
+        "type": "object",
+        "properties": {
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "enum": [
+                    "Product Repository Failed",
+                    "Eligibility failed",
+                    "Price Repository Failed",
+                    ""
+                  ]
+                },
+                "stringCode": {
+                  "type": "string",
+                  "enum": [
+                    "PRODUCT_FAILED",
+                    "PRODUCT_ERROR",
+                    "ELIGIBILITY_ERROR",
+                    "PRICE_FAILED",
+                    "PRICE_ERROR",
+                    "STORE_ERROR"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

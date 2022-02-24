@@ -1,7 +1,6 @@
 {
   "name": "complete-javascript-course-master",
   "version": "1.0.0",
-  "type": "module",
   "description": "This repo contains starter files and final code for all sections and projects contained in the course.",
   "moduleDirectories": [
     "node_modules",
@@ -20,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "api-spec-converter": "^2.12.0",
     "leaflet": "^1.7.1",
     "lodash-es": "^4.17.21"
   }
