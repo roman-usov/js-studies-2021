@@ -1,0 +1,451 @@
+{
+  "id": "/catalogue/vodosnabzhenie.html",
+  "catId": "ca5bcac0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+  "name": "Водоснабжение",
+  "picture": "https://res.cloudinary.com/lmru-test/image/upload/f_auto,q_auto/elbrus/pic-for-mob-app/vodosnabgenie.jpg",
+  "level": 1,
+  "modular": false,
+  "sitePath": "/catalogue/vodosnabzhenie.html",
+  "childs": [
+    {
+      "id": "/catalogue/vodosnabzhenie/truboprovod.html",
+      "catId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+      "name": "Трубопровод",
+      "level": 2,
+      "parentId": "ca5bcac0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+      "modular": false,
+      "sitePath": "/catalogue/truboprovod.html",
+      "childs": [
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/truby-iz-sshitogo-polietilena-i-fitingi.html",
+          "catId": "ff44fb19-256d-4566-9aba-f88a1b17cd24_Opus_Family",
+          "name": "Трубы из сшитого полиэтилена и фитинги",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/truby-iz-sshitogo-polietilena-i-fitingi.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/truby-iz-sshitogo-polietilena-i-fitingi/truby-16-mm.html",
+              "catId": "346a97e0-0dfd-11eb-af52-db418777676f",
+              "name": "Трубы 16 мм",
+              "level": 4,
+              "parentId": "ff44fb19-256d-4566-9aba-f88a1b17cd24_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/truby-iz-sshitogo-polietilena-i-fitingi/truby-16-mm.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/truby-iz-sshitogo-polietilena-i-fitingi/truby-20-mm.html",
+              "catId": "c55f3490-0dfd-11eb-af52-db418777676f",
+              "name": "Трубы 20 мм",
+              "level": 4,
+              "parentId": "ff44fb19-256d-4566-9aba-f88a1b17cd24_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/truby-iz-sshitogo-polietilena-i-fitingi/truby-20-mm.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/truby-iz-sshitogo-polietilena-i-fitingi/mufty-rehau.html",
+              "name": "Муфты Rehau",
+              "level": 4,
+              "parentId": "ff44fb19-256d-4566-9aba-f88a1b17cd24_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/truby-iz-sshitogo-polietilena-i-fitingi/mufty-rehau.html",
+              "uda": {
+                "22088": "Муфта|Муфта с внутренней резьбой|Муфта с наружной резьбой|Муфта с наружной резьбой|Соединительный элемент с внутренней резьбой|Соединительный элемент с наружной резьбой",
+                "06575": "REHAU"
+              },
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/polipropilenovye-truby-i-fitingi.html",
+          "catId": "94c2a2bc-8ff7-4f9f-9e83-00d44d33aa57",
+          "name": "Полипропиленовые трубы и фитинги",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/polipropilenovye-truby-i-fitingi.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/polipropilenovye-truby-i-fitingi/truby.html",
+              "name": "Трубы полипропиленовые",
+              "level": 4,
+              "parentId": "94c2a2bc-8ff7-4f9f-9e83-00d44d33aa57",
+              "modular": false,
+              "sitePath": "/catalogue/polipropilenovye-truby-i-fitingi/truby.html",
+              "uda": {
+                "22088": "ППР-труба"
+              },
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/polipropilenovye-truby-i-fitingi/mufty.html",
+              "catId": "1a7bdd20-072d-11eb-af52-db418777676f",
+              "name": "Муфты для полипропиленовых труб",
+              "level": 4,
+              "parentId": "94c2a2bc-8ff7-4f9f-9e83-00d44d33aa57",
+              "modular": false,
+              "sitePath": "/catalogue/polipropilenovye-truby-i-fitingi/mufty.html",
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/truby-pnd-i-fitingi.html",
+          "catId": "e63f5a36-8545-4cd7-834a-89859ab19c06_Opus_Family",
+          "name": "Трубы ПНД и фитинги",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/truby-pnd-i-fitingi.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/truby-pnd-i-fitingi/truby-pnd-gost.html",
+              "catId": "fd81f760-596a-11ea-ad81-af309490eba8_Opus_Family",
+              "name": "Трубы полиэтиленовые ПНД ГОСТ",
+              "level": 4,
+              "parentId": "e63f5a36-8545-4cd7-834a-89859ab19c06_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/truby-pnd-i-fitingi/truby-pnd-gost.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/truby-pnd-i-fitingi/truby-32-mm.html",
+              "catId": "1c6a1f11-b9fe-11ea-aa51-5317b1ca7fd7",
+              "name": "Трубы ПНД 32 мм",
+              "level": 4,
+              "parentId": "e63f5a36-8545-4cd7-834a-89859ab19c06_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/truby-pnd-i-fitingi/truby-32-mm.html",
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/metalloplastikovye-truby-i-fitingi.html",
+          "catId": "a347e24a-0ef0-4aaf-bd3a-9adcad7c5c05_Opus_Family",
+          "name": "Металлопластиковые трубы и фитинги",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/metalloplastikovye-truby-i-fitingi.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/metalloplastikovye-truby-i-fitingi/truby-16-mm.html",
+              "catId": "5408fe81-0d5c-11eb-af52-db418777676f",
+              "name": "Металлопластиковые трубы 16 мм",
+              "level": 4,
+              "parentId": "a347e24a-0ef0-4aaf-bd3a-9adcad7c5c05_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/metalloplastikovye-truby-i-fitingi/truby-16-mm.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/metalloplastikovye-truby-i-fitingi/truby-20-mm.html",
+              "catId": "7344e7a0-0d5c-11eb-af52-db418777676f",
+              "name": "Металлопластиковые трубы 20 мм",
+              "level": 4,
+              "parentId": "a347e24a-0ef0-4aaf-bd3a-9adcad7c5c05_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/metalloplastikovye-truby-i-fitingi/truby-20-mm.html",
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/stalnye-truby-i-fitingi.html",
+          "catId": "03b54b50-3b6d-47c4-b8c5-3101229dbb4c_Opus_Family",
+          "name": "Стальные трубы и фитинги",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/stalnye-truby-i-fitingi.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/stalnye-truby-i-fitingi/truby-stalnye-20-mm.html",
+              "catId": "be8075d0-cbf4-11ea-a83a-0d50811038da",
+              "name": "Трубы стальные 20 мм",
+              "level": 4,
+              "parentId": "03b54b50-3b6d-47c4-b8c5-3101229dbb4c_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/stalnye-truby-i-fitingi/truby-stalnye-20-mm.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/stalnye-truby-i-fitingi/truby-stalnye-25-mm.html",
+              "catId": "c5c80420-cbf4-11ea-a83a-0d50811038da",
+              "name": "Трубы стальные 25 мм",
+              "level": 4,
+              "parentId": "03b54b50-3b6d-47c4-b8c5-3101229dbb4c_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/stalnye-truby-i-fitingi/truby-stalnye-25-mm.html",
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/mednye-truby-i-fitingi.html",
+          "catId": "6e4c0a15-7d83-45ac-af18-3c0c67787ca9_Opus_Family",
+          "name": "Медные трубы и фитинги",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/mednye-truby-i-fitingi.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/mednye-truby-i-fitingi/fitingi-pod-payku.html",
+              "catId": "7be8eaa0-022c-11ea-9acd-25c90f55c6ea_Opus_Family",
+              "name": "Фитинги для медной трубы под пайку ",
+              "level": 4,
+              "parentId": "6e4c0a15-7d83-45ac-af18-3c0c67787ca9_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/mednye-truby-i-fitingi/fitingi-pod-payku.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/mednye-truby-i-fitingi/fitingi-pod-press.html",
+              "catId": "822cc490-022c-11ea-9acd-25c90f55c6ea_Opus_Family",
+              "name": "Фитинги для медной трубы под пресс",
+              "level": 4,
+              "parentId": "6e4c0a15-7d83-45ac-af18-3c0c67787ca9_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/mednye-truby-i-fitingi/fitingi-pod-press.html",
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/truby-iz-nerzhaveyushchey-stali.html",
+          "catId": "c23935bd-08a8-4061-ba5b-0aacbb0b513b_Opus_Family",
+          "name": "Трубы из нержавеющей стали",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/truby-iz-nerzhaveyushchey-stali.html",
+          "childs": []
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/rezbovye-fitingi.html",
+          "catId": "5c93bc70-af93-11e9-981d-65573a5b0b4c_Opus_Family",
+          "name": "Резьбовые фитинги",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/rezbovye-fitingi.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/rezbovye-fitingi/nippeli-latunnye.html",
+              "catId": "3fff3aa0-abd0-11ea-91bd-1b28048e721b",
+              "name": "Ниппели латунные",
+              "level": 4,
+              "parentId": "5c93bc70-af93-11e9-981d-65573a5b0b4c_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/rezbovye-fitingi/nippeli-latunnye.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/rezbovye-fitingi/nippeli-latunnye-1-dyuym.html",
+              "catId": "480bedb0-abd0-11ea-91bd-1b28048e721b",
+              "name": "Ниппели латунные 1 дюйм",
+              "level": 4,
+              "parentId": "5c93bc70-af93-11e9-981d-65573a5b0b4c_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/rezbovye-fitingi/nippeli-latunnye-1-dyuym.html",
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/izolyaciya-dlya-trub.html",
+          "catId": "izolyaciya-dlya-trub-201709_Opus_Family",
+          "name": "Изоляция для труб",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/izolyaciya-dlya-trub.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/izolyaciya-dlya-trub/izolyaciya-dlya-trub-k-flex.html",
+              "catId": "f8cd8a20-cbf4-11ea-a83a-0d50811038da",
+              "name": "Изоляция для труб K-Flex",
+              "level": 4,
+              "parentId": "izolyaciya-dlya-trub-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/izolyaciya-dlya-trub/izolyaciya-dlya-trub-k-flex.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/izolyaciya-dlya-trub/izolyaciya-dlya-trub-iz-kauchuka.html",
+              "catId": "08a3a5b0-cbf5-11ea-a83a-0d50811038da",
+              "name": "Изоляция для труб из каучука",
+              "level": 4,
+              "parentId": "izolyaciya-dlya-trub-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/izolyaciya-dlya-trub/izolyaciya-dlya-trub-iz-kauchuka.html",
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/podvodka-dlya-vody.html",
+          "catId": "gibkaya-podvodka-dlya-vody-201709_Opus_Family",
+          "name": "Подводка для воды",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/podvodka-dlya-vody.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/podvodka-dlya-vody/equation.html",
+              "catId": "gibkaya-podvodka-dlya-vody-201709_Opus_Family",
+              "name": "Гибкая подводка — вода EQUATION",
+              "level": 4,
+              "parentId": "gibkaya-podvodka-dlya-vody-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/podvodka-dlya-vody/equation.html",
+              "uda": {
+                "06575": "EQUATION"
+              },
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/podvodka-dlya-vody/3-8.html",
+              "name": "Гибкая подводка для воды 3/8\"",
+              "level": 4,
+              "parentId": "gibkaya-podvodka-dlya-vody-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/podvodka-dlya-vody/3-8.html",
+              "uda": {
+                "21424": "3/8\""
+              },
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/podvodka-dlya-gaza.html",
+          "catId": "gibkaya-podvodka-dlya-gaza-201709_Opus_Family",
+          "name": "Подводка для газа",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/podvodka-dlya-gaza.html",
+          "childs": []
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/zapornaya-armatura.html",
+          "catId": "zapornaya-armatura-201709_Opus_Family",
+          "name": "Запорная арматура",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/zapornaya-armatura.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/zapornaya-armatura/sharovye-krany.html",
+              "catId": "e2e11440-03ce-11eb-af52-db418777676f",
+              "name": "Шаровые краны",
+              "level": 4,
+              "parentId": "zapornaya-armatura-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/zapornaya-armatura/sharovye-krany.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/zapornaya-armatura/sharovye-krany-1-2-dyuyma.html",
+              "catId": "94ce9c60-8aba-11ea-8ea6-23e423bbb7fb",
+              "name": "Шаровые краны 1/2 дюйма",
+              "level": 4,
+              "parentId": "zapornaya-armatura-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/zapornaya-armatura/sharovye-krany-1-2-dyuyma.html",
+              "childs": []
+            }
+          ]
+        },
+        {
+          "id": "/catalogue/vodosnabzhenie/truboprovod/kollektory-dlya-vody.html",
+          "catId": "kollektory-dlya-vody-201709_Opus_Family",
+          "name": "Коллекторы для воды",
+          "level": 3,
+          "parentId": "f08625b0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/kollektory-dlya-vody.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/kollektory-dlya-vody/far.html",
+              "catId": "16773640-138d-11eb-ae89-3d87e9d69e6b",
+              "name": "Коллекторы для воды far",
+              "level": 4,
+              "parentId": "kollektory-dlya-vody-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/kollektory-dlya-vody/far.html",
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/truboprovod/kollektory-dlya-vody/far-raspredelitelnye.html",
+              "catId": "37c313a0-138d-11eb-ae89-3d87e9d69e6b",
+              "name": "Коллекторы для воды far распределительные",
+              "level": 4,
+              "parentId": "kollektory-dlya-vody-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/kollektory-dlya-vody/far-raspredelitelnye.html",
+              "childs": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "/catalogue/vodosnabzhenie/vodonagrevateli.html",
+      "catId": "90f9bd40-48e8-11ea-9e76-ef66c83887c3_Opus_Family",
+      "name": "Водонагреватели",
+      "level": 2,
+      "parentId": "ca5bcac0-48e7-11ea-9e76-ef66c83887c3_Opus_Family",
+      "modular": false,
+      "sitePath": "/catalogue/vodonagrevateli.html",
+      "childs": [
+        {
+          "id": "/catalogue/vodosnabzhenie/vodonagrevateli/elektricheskie-vodonagrevateli-nakopitelnye.html",
+          "catId": "elektricheskie-vodonagrevateli-nakopitelnye-201709_Opus_Family",
+          "name": "Электрические водонагреватели накопительные",
+          "level": 3,
+          "parentId": "90f9bd40-48e8-11ea-9e76-ef66c83887c3_Opus_Family",
+          "modular": false,
+          "sitePath": "/catalogue/elektricheskie-vodonagrevateli-nakopitelnye.html",
+          "childs": [
+            {
+              "id": "/catalogue/vodosnabzhenie/vodonagrevateli/elektricheskie-vodonagrevateli-nakopitelnye/10.html",
+              "catId": "60bcb620-9f58-11ea-875a-59507158b911",
+              "name": "Водонагреватели 10 литров",
+              "level": 4,
+              "parentId": "elektricheskie-vodonagrevateli-nakopitelnye-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/elektricheskie-vodonagrevateli-nakopitelnye/10.html",
+              "uda": {
+                "00056": "10"
+              },
+              "childs": []
+            },
+            {
+              "id": "/catalogue/vodosnabzhenie/vodonagrevateli/elektricheskie-vodonagrevateli-nakopitelnye/100.html",
+              "catId": "8f506310-9f58-11ea-875a-59507158b911",
+              "name": "Водонагреватели 100 литров",
+              "level": 4,
+              "parentId": "elektricheskie-vodonagrevateli-nakopitelnye-201709_Opus_Family",
+              "modular": false,
+              "sitePath": "/catalogue/elektricheskie-vodonagrevateli-nakopitelnye/100.html",
+              "uda": {
+                "00056": "100"
+              },
+              "childs": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
