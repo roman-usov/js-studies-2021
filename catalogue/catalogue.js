@@ -1,4 +1,4 @@
-import catalogue from "/catalogue/catalogue.json" assert { type: "json" };
+import catalogue from "/catalogue/catalogue.json";
 
 // console.log(catalogue);
 
@@ -173,4 +173,3 @@ console.log(
 );
 
 console.timeEnd("breadcrumbs");
-

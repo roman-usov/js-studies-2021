@@ -1,4 +1,6 @@
-import catalogue from "./catalogue.json" assert { type: "json" };
+// import catalogue from "./catalogue.json";
+const catalogue = require("./catalogue.json")
+const fs = require('fs');
 
 const familyIds = [
   "5a147a50-96d6-11e9-90ad-65933a6151de"
@@ -45,7 +47,7 @@ function getBreadCrumbs(source, familyId, foundBreadcrumbs = []) {
         .map((breadcrumb) => {
           return {
             label: breadcrumb.name,
-            link: breadcrumb.sitePath.slice(0, -HTML_EXTENSION_LENGTH),
+            link: `${breadcrumb.sitePath.slice(0, -HTML_EXTENSION_LENGTH)}/`,
 
           };
         })
@@ -66,16 +68,25 @@ function getBreadCrumbs(source, familyId, foundBreadcrumbs = []) {
   }
 }
 
-// console.log(getBreadCrumbs(catalogue, "sdfasfda"));
+// console.log(getBreadCrumbs(catalogue, "9e005760-4672-11ea-b9e6-8d2ee1855ff8"));
 
-console.time("start")
+// console.time("start")
+//
+// for (let i = 0, len = familyIds.length; i < len; i += 1) {
+//   const result = getBreadCrumbs(catalogue, familyIds[i]);
+//   if (result) {
+//     console.log(familyIds[i], result);
+//     break;
+//   }
+// }
+//
+// console.timeEnd("start")
 
-for (let i = 0, len = familyIds.length; i < len; i += 1) {
-  const result = getBreadCrumbs(catalogue, familyIds[i]);
-  if (result) {
-    console.log(familyIds[i], result);
-    break;
-  }
+function fillBreadcrumbsCacheMap(catalogue) {
+  let rawCatalogue = fs.readFileSync(catalogue);
+  let catJSON = JSON.parse(rawCatalogue);
+
+  console.log(catJSON.length)
 }
 
-console.timeEnd("start")
+fillBreadcrumbsCacheMap(catalogue)
